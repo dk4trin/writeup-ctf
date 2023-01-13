@@ -2,9 +2,13 @@ I was going to call this challenge babynet, but I have that baby shark song stuc
 > capture.zip
 
 When unpacking the .zip file we find the **capture.pcapng** file
+
+
 ![zip file!](/irisctf2023/network/img/zip-file.png "zip file")
 
 We can open this up in Wireshark and sort the Protocols tab, so we'll see 6 packets with the HTTP protocol
+
+
 ![http-packets!](/irisctf2023/network/img/http-packets.png "http packets")
 
 In this first HTTP packet
@@ -25,7 +29,11 @@ Upgrade-Insecure-Requests: 1
 
 Then we can exfiltrate the HTTP objects to analyze this gif file and thus obtain the flag
 `File > Export Objects > HTTP > Click in babyshark.gif`
+
+
 ![http-export!](/irisctf2023/network/img/http-export.png "http export")
+
+
 ![flag!](/irisctf2023/network/img/babyshark-flag.png "flag")
 
 `irisctf{welc0m3_t0_n3tw0rks}`
